@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet/less" type="text/css" href="/economy/Content/Economy.less" />
+    <link rel="stylesheet/less" type="text/css" href="/Web/Content/Web.less" />
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/less")
+
+
+
+    <script type="text/javascript" src="Scripts/require.config.js"></script>
+    <script data-main="main" src="Scripts/require.js"></script>
+</head>
+<body>
+    @RenderBody()
+
+@*    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)*@
+
+</body>
+</html>

@@ -208,6 +208,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\toastr.less" />
     <Content Include="Content\Web.less" />
+    <None Include="Properties\PublishProfiles\Web.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <None Include="Scripts\amplify-vsdoc.js" />
     <Content Include="Scripts\amplify.js" />

@@ -1,0 +1,40 @@
+﻿
+<section>
+    <div class="table" data-bind="with: action">
+        <div class="row">
+            <div class="cell">Händelsedatum</div>
+            <div class="cell"><input data-bind="datepicker: executeDate, datepickerOptions: { minDate: new Date() }" /></div>
+        </div>       
+        <div class="row">
+            <div class="cell">Ledtexter</div>
+            <div class="cell">
+                <div data-bind="foreach: labels">
+                    <input class="input" type="text" data-bind="value: $data" />
+                    <input type="button" title="-" data-bind="click: $root.onRemoveLabelClick" />
+                </div>
+                <input type="button" title="+" data-bind="click: $parent.onAddLabelClick" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell">Värde</div>
+            <div class="cell"><input class="input" type="text" data-bind="value: value" /></div>
+        </div>
+        <div class="row">
+            <div class="cell">Ärende</div>
+            <div class="cell"><input class="input" type="text" data-bind="value: title" /></div>
+        </div>
+        <div class="row">
+            <div class="cell">Kommentar</div>
+            <div class="cell"><input class="input" type="text" data-bind="value: comment" /></div>
+        </div>
+        <div class="row">
+            <div class="cell">Status</div>
+            <div class="cell"><select class="input" data-bind="options: $parent.statuses, value: status" /></div>
+        </div>
+
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"><div class="mainButton" data-bind="click: $parent.onSaveActionClick">Spara</div><div class="mainButton" data-bind="click: $parent.onCancelActionClick">Avbryt</div></div>
+        </div>
+    </div>
+</section>
